@@ -6,7 +6,7 @@ import { Button, Card, Row, Col } from 'react-bootstrap';
 
 
 
-export const Entry = ({ entryData, setChangeIngredient, deleteSingleEntry, setChangeEntry }) => {
+  const Entry = ({ entryData, setChangeIngredient, deleteSingleEntry, setChangeEntry }) => {
   return (
     <Card>
       <Row>
@@ -30,10 +30,20 @@ export const Entry = ({ entryData, setChangeIngredient, deleteSingleEntry, setCh
 
   function ChangeIngredient() {
     setChangeIngredient({
-"change":true,
-"id":entryData._id
+      "change": true,
+      "id": entryData._id
     })
   }
+  function ChangeEntry() {
+    setChangeEntry({
+      "change": true,
+      "id": entryData._id
+    })
+  }
+
+
+
+
 }
 
 
@@ -44,3 +54,5 @@ Entry.propTypes = {
   deleteSingleEntry: PropTypes.func,
   setChangeEntry: PropTypes.func
 }
+
+export default Entry;

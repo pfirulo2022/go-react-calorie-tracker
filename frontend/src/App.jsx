@@ -1,10 +1,13 @@
  import 'bootstrap/dist/css/bootstrap.css'
- import Entries from '././components/Entries';
+import Entries from './components/entries.components';
  
-export const App = () => {
+ 
+  const App = () => {
   return (
-    <div>
+    <>
         <Entries />
-    </div>
+    </>
   )
 }
+
+export default App;
